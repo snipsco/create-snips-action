@@ -1,0 +1,31 @@
+{
+  "name": "create-snips-action",
+  "version": "0.1.0",
+  "description": "Generator for writing Snips action code in Javascript.",
+  "main": "script.js",
+  "bin": {
+    "create-snips-action": "./script.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Julien Elbaz",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/snipsco/create-snips-action"
+  },
+  "bugs": {
+    "url": "https://github.com/snipsco/create-snips-action/issues"
+  },
+  "dependencies": {
+    "ansi-colors": "^3.2.3",
+    "fs-extra": "^7.0.1",
+    "inquirer": "^6.2.1",
+    "klaw-sync": "^6.0.0",
+    "mustache": "^3.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^5.12.1"
+  }
+}
