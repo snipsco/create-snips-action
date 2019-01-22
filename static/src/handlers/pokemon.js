@@ -27,7 +27,7 @@ module.exports = async function (msg, flow) {
     // Return the TTS speech.
     const i18n = i18nFactory.get()
     const pokemonName = pokemon.forms[0].name
-    return i18n({
+    return i18n('pokemon.info', {
         name: pokemonName,
         weight: pokemon.weight,
         height: pokemon.height

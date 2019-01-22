@@ -9,6 +9,6 @@
         "unspecific": "Oops, something went wrong."
     },
     "pokemon": {
-        "info": "{{ name }}'s weight is ${{ weight }} and its height is {{ height }}."
+        "info": "{{ name }}'s weight is {{ weight }} and its height is {{ height }}."
     }
 }
