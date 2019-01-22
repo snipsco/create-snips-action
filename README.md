@@ -4,7 +4,7 @@
 ## Setup
 
 ```bash
-npm init create-snips-action
+npm init snips-action
 ```
 
 ## Features
