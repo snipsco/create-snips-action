@@ -7,4 +7,4 @@ debug.enable(name + ':error')
 // Uncomment this line to print everything
 // debug.enable(name + ':*')
 
-require('./src/index')
+require('./src/index')()
