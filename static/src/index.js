@@ -6,15 +6,12 @@ const { translation, logger } = require('./utils')
 // Initialize hermes
 module.exports = function ({
     hermesOptions = {},
-    mock = {
-        i18n: false,
-        http: false
-    }
+    bootstrapOptions = {}
 } = {}) {
     withHermes(async (hermes, done) => {
         try {
             // Bootstrap config, locale, i18n…
-            await bootstrap(mock)
+            await bootstrap(bootstrapOptions)
 
             const dialog = hermes.dialog()
 

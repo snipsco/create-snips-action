@@ -3,10 +3,6 @@ const { i18nFactory } = require('../factories')
 const { message } = require('../utils')
 
 module.exports = async function (msg, flow) {
-    // Print the received intent message
-    // eslint-disable-next-line
-    console.log('Received:\n', JSON.stringify(msg))
-
     // Suppose we have a pokemon id slot
     // If there are multiple, we take the only that is supposed to be the 'most valid'.
     // We discard slots with a confidence value too low.
@@ -26,7 +22,7 @@ module.exports = async function (msg, flow) {
 
     // Return the TTS speech.
     const i18n = i18nFactory.get()
-    const pokemonName = pokemon.forms[0].name
+    const pokemonName = pokemon.name
     return i18n('pokemon.info', {
         name: pokemonName,
         weight: pokemon.weight,

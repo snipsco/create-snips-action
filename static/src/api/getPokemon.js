@@ -1,6 +1,7 @@
-const request = require('./request')
+const { httpFactory } = require('../factories')
 
 // Get a Pokemon by its id.
 module.exports = function (id) {
-    return request.url(`/pokemon/${id}/`).get().json()
+    const http = httpFactory.get()
+    return http.url(`/pokemon/${id}/`).get().json()
 }

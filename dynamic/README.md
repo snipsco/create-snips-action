@@ -28,8 +28,8 @@ When running from the terminal, to enable full depth object printing:
 env DEBUG_DEPTH=null action.js
 ```
 
-## Test
+## Test & Lint
 
 *Requires [mosquitto](https://mosquitto.org/download/) to be installed.*
 
-`npm test`
+`npm start`

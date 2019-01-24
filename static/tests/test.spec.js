@@ -11,6 +11,11 @@ it('should query a Pokemon by its id and output its name', async () => {
             createPokemonIdSlot('1')
         ]
     })
-    const message = await session.end()
-    expect(message.text.indexOf('bulbasaur')).toBeGreaterThan(-1)
+    // In test mode, the i18n output is mocked as a JSON contining the i18n key and associated options.
+    // (basically the arguments passed to i18n, in serialized string form)
+    const { key, options } = JSON.parse((await session.end()).text)
+    expect(key).toBe('pokemon.info')
+    expect(options.name).toBe('bulbasaur')
+    expect(options.weight).toBe(69)
+    expect(options.height).toBe(7)
 })

@@ -31,5 +31,8 @@ module.exports = {
             })
             server.listen()
         })
+    },
+    getMessageKey(message) {
+        return JSON.parse(message.text).key
     }
 }

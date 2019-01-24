@@ -3,6 +3,7 @@
 const { spawn } = require('child_process')
 const mqtt = require('mqtt')
 const { getFreePort } = require('./tools')
+const fetchMock = require('fetch-mock')
 
 module.exports = {
     bootstrap() {
@@ -19,9 +20,13 @@ module.exports = {
                     address: 'localhost:' + mosquittoPort,
                     logs: true
                 },
-                mock: {
-                    i18n: true,
-                    http: true
+                bootstrapOptions: {
+                    i18n: {
+                        mock: true
+                    },
+                    http: {
+                        mock: require('../httpMocks').mock(fetchMock.sandbox())
+                    }
                 }
             })
         })
