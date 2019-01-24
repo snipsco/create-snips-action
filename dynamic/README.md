@@ -4,7 +4,7 @@
 ## Setup
 
 ```
-npm install
+sh build.sh
 ```
 
 ## Run
