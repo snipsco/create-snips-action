@@ -3,19 +3,20 @@
 
 ## Setup
 
-```
-sh build.sh
+```sh
+# Install the dependencies and creates the config.ini file.
+sh setup.sh
 ```
 
 ## Run
 
-```
-node action.js
+```sh
+node action-snips.js
 ```
 
 ## Debug
 
-In the `action.js` file:
+In the `action-snips.js` file:
 
 ```js
 // Uncomment this line to print everything
@@ -25,7 +26,7 @@ In the `action.js` file:
 When running from the terminal, to enable full depth object printing:
 
 ```bash
-env DEBUG_DEPTH=null action.js
+env DEBUG_DEPTH=null action-snips.js
 ```
 
 ## Test & Lint

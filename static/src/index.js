@@ -17,7 +17,6 @@ module.exports = function ({
 
             // This is a placeholder! Replace that by something valid!
             dialog.flow('pokemon', handlers.pokemon)
-
         } catch (error) {
             // Output initialization errors to stderr and exit
             const message = await translation.errorMessage(error)

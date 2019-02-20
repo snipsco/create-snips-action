@@ -20,6 +20,8 @@ module.exports = {
     randomTranslation (key, opts) {
         const i18n = i18nFactory.get()
         const possibleValues = i18n(key, { returnObjects: true, ...opts })
+        if(typeof possibleValues === 'string')
+            return possibleValues
         const randomIndex = Math.floor(Math.random() * possibleValues.length)
         return possibleValues[randomIndex]
     }

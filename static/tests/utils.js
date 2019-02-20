@@ -3,11 +3,15 @@ module.exports = {
         return {
             slotName: 'pokemon_id',
             entity: 'pokemon_id',
-            confidence: 1,
+            confidenceScore: 1,
             rawValue: id,
             value: {
                 kind: 'Custom',
                 value: id
+            },
+            range: {
+                start: 0,
+                end: 1
             }
         }
     }

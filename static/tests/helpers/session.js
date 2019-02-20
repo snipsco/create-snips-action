@@ -26,7 +26,7 @@ class Session {
                  siteId: 'default',
                  intent: {
                      intentName,
-                     probability: 0.5
+                     confidenceScore: 0.5
                  },
                  asrTokens: [],
                  slots: [],
