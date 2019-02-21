@@ -23,12 +23,6 @@ In the `action-snips.js` file:
 // debug.enable(name + ':*')
 ```
 
-When running from the terminal, to enable full depth object printing:
-
-```bash
-env DEBUG_DEPTH=null action-snips.js
-```
-
 ## Test & Lint
 
 *Requires [mosquitto](https://mosquitto.org/download/) to be installed.*
