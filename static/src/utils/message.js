@@ -1,3 +1,7 @@
+function geometricMean (dataSet) {
+    return Math.pow(dataSet.reduce((accumulator, element) => accumulator * element, 1), 1/dataSet.length)
+}
+
 module.exports = {
     // Helper to filter slots given their name, and potentially a lower threshold for the confidence level.
     // You can also use the onlyMostConfident boolean to return only a single slot with the highest confidence.
@@ -13,5 +17,8 @@ module.exports = {
             }, null)
         }
         return message.slots.filter(slot => slot.slotName === slotName && slot.confidenceScore > threshold)
+    },
+    getAsrConfidence(message) {
+        return geometricMean(message.asrTokens[0].map(token => token.confidence))
     }
 }
