@@ -19,6 +19,14 @@ class Session {
         })
     }
 
+    unsubscribe (topic) {
+        return new Promise((resolve, reject) => {
+            this.mqtt.unsubscribe(topic, err => {
+                err ? reject(err) : resolve()
+            })
+        })
+    }
+
     async publishMessage ({ intentName, input, ...additionalFields }) {
         return new Promise(resolve => {
             this.mqtt.publish(`hermes/intent/${intentName}`, JSON.stringify({
@@ -53,8 +61,8 @@ class Session {
             throw new Error('input and intentName fields are required')
         }
         // Subscribe to the continueSession/endSession callbacks
-        this.subscribe('hermes/dialogueManager/continueSession')
-        this.subscribe('hermes/dialogueManager/endSession')
+        await this.subscribe('hermes/dialogueManager/continueSession')
+        await this.subscribe('hermes/dialogueManager/endSession')
         // Publish an intent message
         this.publishMessage({ intentName, input, ...additionalFields })
     }
@@ -83,6 +91,8 @@ class Session {
         // Asserts
         expect(topic).toBe('hermes/dialogueManager/endSession')
         expect(message.sessionId).toBe(this.sessionId)
+        await this.unsubscribe('hermes/dialogueManager/continueSession')
+        await this.unsubscribe('hermes/dialogueManager/endSession')
         return message
     }
 }
