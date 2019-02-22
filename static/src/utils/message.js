@@ -19,6 +19,8 @@ module.exports = {
         return message.slots.filter(slot => slot.slotName === slotName && slot.confidenceScore > threshold)
     },
     getAsrConfidence(message) {
+        if(!message.asrTokens || message.asrTokens.length < 1)
+            return 1
         return geometricMean(message.asrTokens[0].map(token => token.confidence))
     }
 }
