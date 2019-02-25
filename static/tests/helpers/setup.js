@@ -26,6 +26,11 @@ module.exports = {
                     },
                     http: {
                         mock: require('../httpMocks').mock(fetchMock.sandbox())
+                    },
+                    config: {
+                        mock: {
+                            locale: 'english'
+                        }
                     }
                 }
             })
