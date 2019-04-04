@@ -1,0 +1,14 @@
+{
+    "error": {
+        "mqtt": "Désolé, une erreur s'est produite lors de la communication avec la plateforme Snips.",
+        "config": "Désolé, une erreur s'est produite avec votre fichier de configuration.",
+        "localisation": "Désolé, une erreur s'est produite avec vos paramètres de localisation.",
+        "intentNotRecognized": "Désolé, je n'ai pas compris votre requête.",
+        "APIResponse": "Désolé, une erreur s'est produite avec le service distant.",
+        "APIRequest": "Désolé, le service distant est injoignable.",
+        "unspecific": "Oups, quelque chose s'est mal passé."
+    },
+    "pokemon": {
+        "info": "Le pokémon {{ name }} pèse {{ weight }} kilos et mesure {{ height }} centimètres."
+    }
+}

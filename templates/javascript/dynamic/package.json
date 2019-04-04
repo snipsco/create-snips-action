@@ -1,0 +1,36 @@
+{
+  "name": "{{ name }}",
+  "version": "0.0.1",
+  "description": "{{ description }}",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "npm run lint && npm run build && npm run test",
+    "build": "snips-toolkit build",
+    "dev": "snips-toolkit dev",
+    "test": "snips-toolkit test '^.*\\.spec\\.[jt]s$'",
+    "launch": "snips-toolkit run",
+    "lint": "eslint \"**/*.[jt]s\""
+  },
+  "author": "{{ author }}",
+  "license": "MIT",
+  "dependencies": {
+    "hermes-javascript": "^0.3.5",
+    "snips-toolkit": "^0.0.3"
+  },
+  "devDependencies": {
+    "eslint": "^5.15.3",
+    "eslint-plugin-jest": "^22.4.1"
+  },
+  "sandbox": [
+    "fs",
+    "http",
+    "https",
+    "os",
+    "path",
+    "stream",
+    "tty",
+    "url",
+    "util",
+    "zlib"
+  ]
+}

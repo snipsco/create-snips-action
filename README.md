@@ -1,5 +1,5 @@
 # create-snips-action
-#### Generator for writing Snips action code in Javascript.
+#### Generator for writing Snips action code in Javascript/Typescript.
 
 ## Setup
 
@@ -8,6 +8,8 @@ npm init snips-action
 ```
 
 ## Features
+
+**📦Uses the [javascript-toolkit](https://github.com/snipsco/snips-javascript-toolkit) package under the hood.**
 
 - 🐚 Action code template (folder structure & files) fully commented
 - ⚚ Platform interactions going through [hermes-javascript](https://www.npmjs.com/package/hermes-javascript)
