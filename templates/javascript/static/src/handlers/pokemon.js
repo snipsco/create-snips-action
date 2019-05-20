@@ -2,25 +2,25 @@ import { i18n, message } from 'snips-toolkit'
 import { getPokemon } from '../api'
 
 export default async function (msg, flow) {
-    // Suppose we have a pokemon id slot
-    // If there are multiple, we take the only that is supposed to be the 'most valid'.
-    // We discard slots with a confidence value too low.
+    // Extract the name or id of the pokemon from the "pokemon_id" slot.
+    // - If the confidence level is below 50%, we discard the slot. (threshold: 0.5)
+    // - If multiple pokemon names/ids were found by the NLU,
+    //   we pick only the one with the best confidence. (onlyMostConfident: true)
     const pokemonSlot = message.getSlotsByName(msg, 'pokemon_id', { onlyMostConfident: true, threshold: 0.5 })
 
-    // We need this slot, so if the slot had a low confidence or was not mark as required,
-    // we throw an error.
+    // If the slot was not found or was discarded, we throw.
     if(!pokemonSlot) {
         throw new Error('intentNotRecognized')
     }
 
-    // Get the Pokemon data
+    // Make an API call to retrieve the pokemon details.
     const pokemon = await getPokemon(pokemonSlot.value.value)
+    const pokemonName = pokemon.name
 
-    // End the dialog session.
+    // Mark the session as ended.
     flow.end()
 
-    // Return the TTS speech.
-    const pokemonName = pokemon.name
+    // Speak!
     return i18n.translate('pokemon.info', {
         name: pokemonName,
         weight: pokemon.weight,

@@ -15,7 +15,7 @@
   "license": "MIT",
   "dependencies": {
     "hermes-javascript": "^0.3.5",
-    "snips-toolkit": "^0.0.3"
+    "snips-toolkit": "^0.1.1"
   },
   "devDependencies": {
     "@types/jest": "^24.0.11",
