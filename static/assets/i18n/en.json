@@ -1,8 +1,8 @@
 {
     "error": {
-        "mqtt": "Sorry, there was a communication error with the Snips platform",
+        "mqtt": "Sorry, there was a communication error with the Snips platform.",
         "config": "Sorry, there was an error with your config file.",
-        "locale": "Sorry, there was an error with your language settings.",
+        "localisation": "Sorry, there was an error with your language settings.",
         "intentNotRecognized": "Sorry, I did not understand your request.",
         "APIResponse": "Sorry, there was an issue with the service provider.",
         "APIRequest": "Sorry, the service provider is unreachable.",
