@@ -1,6 +1,6 @@
 {
   "name": "create-snips-action",
-  "version": "0.3.0",
+  "version": "1.0.0",
   "description": "Generator for writing Snips action code in Javascript.",
   "main": "script.js",
   "files": [
