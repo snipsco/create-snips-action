@@ -1,9 +1,14 @@
 # create-snips-action
 #### Generator for writing Snips action code in Javascript/Typescript.
 
-## Setup
+## Purpose
+
+Create a fully fledged Snips action in a single command.
+
+## Usage
 
 ```bash
+# Run this in your favourite terminal.
 npm init snips-action
 ```
 
