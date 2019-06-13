@@ -14,8 +14,8 @@
   "author": "{{ author }}",
   "license": "MIT",
   "dependencies": {
-    "hermes-javascript": "^0.3.5",
-    "snips-toolkit": "^0.1.1"
+    "hermes-javascript": "^0.3.11",
+    "snips-toolkit": "^1.0.0"
   },
   "devDependencies": {
     "eslint": "^5.15.3",
