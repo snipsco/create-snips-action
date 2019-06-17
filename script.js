@@ -66,7 +66,7 @@ async function main () {
     })
 
     console.log(c.bold.green(`Action ${name} created successfully.`))
-    console.log(`Type ${c.bold(`"cd ${name}"`)} to go to the action root directory followed by ${c.bold('"npm i"')} to install the dependencies.`)
+    console.log(`Type ${c.bold(`"cd ${name}"`)} to go to the action root directory followed by ${c.bold('"sh setup.sh"')} to install the dependencies.`)
     console.log(c.bold('\nAvailable commands:'))
     console.log(`- ${c.bold('npm run dev   ')} Automatically rebuilds and run the action on file change.`)
     console.log(`- ${c.bold('npm run build ')} Builds the action in production mode.`)
