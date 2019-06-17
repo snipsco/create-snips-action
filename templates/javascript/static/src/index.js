@@ -10,13 +10,12 @@ export default async function ({
 }) {
     try {
         const { name } = require('../package.json')
+
         // Initialize logger, config and i18n.
         logger.init(name)
+        logger.enable('error') // Replace 'error' with '*' to log everything.
         config.init()
         await i18n.init(config.get().locale)
-
-        // Replace 'error' with '*' to log everything.
-        logger.enable('error')
 
         // Get the dialog subset.
         const dialog = hermes.dialog()
