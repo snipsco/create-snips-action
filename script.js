@@ -65,12 +65,21 @@ async function main () {
         fs.outputFileSync(destinationPath, output)
     })
 
-    console.log(c.bold.green('Done!'))
+    console.log(c.bold.green(`Action ${name} created successfully.`))
+    console.log(`Type ${c.bold(`"cd ${name}"`)} to go to the action root directory followed by ${c.bold('"npm i"')} to install the dependencies.`)
+    console.log(c.bold('\nAvailable commands:'))
+    console.log(`- ${c.bold('npm run dev   ')} Automatically rebuilds and run the action on file change.`)
+    console.log(`- ${c.bold('npm run build ')} Builds the action in production mode.`)
+    console.log(`- ${c.bold('npm run test  ')} Runs the test suite.`)
+    console.log(`- ${c.bold('npm run launch')} Runs the action in production mode.`)
+    console.log(`- ${c.bold('npm run lint  ')} Performs a linter check.`)
+    console.log(`- ${c.bold('npm start     ')} Lints, builds and tests the action.`)
+    console.log('')
 }
 
 try {
     main()
 } catch (error) {
-    console.error(c.bold.red('Error!'))
+    console.error(c.bold.red('Action creation failed.'))
     throw error
 }
