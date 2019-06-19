@@ -1,9 +1,23 @@
 # create-snips-action
-#### Generator for writing Snips action code in Javascript/Typescript.
+### Generator for writing Snips action code in Javascript/Typescript.
 
-## Purpose
+![npm version](https://img.shields.io/npm/v/create-snips-action.svg)
+![license](https://img.shields.io/npm/l/create-snips-action.svg)
 
-Create a fully fledged Snips action in a single command.
+--------
+
+
+<p align="center">
+<a href="https://asciinema.org/a/WkipaC14XsGtUaRamjbHuQCKx" target="_blank"><img src="https://asciinema.org/a/WkipaC14XsGtUaRamjbHuQCKx.svg" width="600"/></a>
+<br/><br/>
+<strong>Create a fully fledged Snips action in a single command.</strong>
+</p>
+
+## Prerequisites
+
+[`node.js`](https://nodejs.org) must be installed with a version greater or equal than 8.
+
+[Installing the snips platform](https://docs.snips.ai/getting-started) on the same machine is also recommended in order to have a fast development cycle.
 
 ## Usage
 
@@ -11,6 +25,19 @@ Create a fully fledged Snips action in a single command.
 # Run this in your favourite terminal.
 npm init snips-action
 ```
+
+## Related packages and documentation
+
+The bootstraped action have the following dependencies.
+Please refer to their respective repositories for the full documentation.
+
+- [snips-javascript-toolkit](https://github.com/snipsco/snips-javascript-toolkit)
+
+*Used for building, testing, launching the action and contains a bunch of helpers.*
+
+- [hermes-javascript](https://github.com/snipsco/hermes-protocol/tree/master/platforms/hermes-javascript)
+
+*Used to communicate with the platform.*
 
 ## Features
 
