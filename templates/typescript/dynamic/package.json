@@ -14,7 +14,7 @@
   "author": "{{ author }}",
   "license": "MIT",
   "dependencies": {
-    "snips-toolkit": "^1.0.0"
+    "snips-toolkit-runner": "^1.0.0"
   },
   "devDependencies": {
     "@types/jest": "^24.0.11",
@@ -24,6 +24,7 @@
     "eslint": "^5.15.3",
     "eslint-plugin-jest": "^22.4.1",
     "hermes-javascript": "^0.3.11",
+    "snips-toolkit": "^1.0.0",
     "typescript": "^3.3.4000"
   },
   "sandbox": [

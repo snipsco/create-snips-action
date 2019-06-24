@@ -14,12 +14,13 @@
   "author": "{{ author }}",
   "license": "MIT",
   "dependencies": {
-    "snips-toolkit": "^1.0.0"
+    "snips-toolkit-runner": "^1.0.0"
   },
   "devDependencies": {
     "hermes-javascript": "^0.3.11",
     "eslint": "^5.15.3",
-    "eslint-plugin-jest": "^22.4.1"
+    "eslint-plugin-jest": "^22.4.1",
+    "snips-toolkit": "^1.0.0"
   },
   "sandbox": [
     "fs",
