@@ -23,7 +23,7 @@
     "@typescript-eslint/parser": "^1.4.0",
     "eslint": "^5.15.3",
     "eslint-plugin-jest": "^22.4.1",
-    "hermes-javascript": "^0.3.11",
+    "hermes-javascript": "^0.4.1",
     "snips-toolkit": "^1.0.0",
     "typescript": "^3.3.4000"
   },
